@@ -1,0 +1,21 @@
+@use 'variables' as *;
+
+@mixin button-styles {
+  background-color: transparent;
+  border: 1px solid $button-border-color;
+  color: $button-text-color;
+  &:hover {
+    background-color: $button-hover-bg;
+  }
+  &:active {
+    background-color: $button-selected-bg;
+  }
+}
+
+@mixin card-button-styles {
+  background-color: $card-button-bg;
+  color: $card-button-text-color;
+  &:hover {
+    background-color: $card-button-hover-bg;
+  }
+}

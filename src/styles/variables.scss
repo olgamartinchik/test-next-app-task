@@ -1,0 +1,28 @@
+// universal colors
+$color-white: #ffffff;
+$color-red: #ca0100;
+
+// main colors
+$primary-color: #010c13;
+$secondary-color: #a9a9a9;
+$background-color: $color-white;
+$accent-color: $color-red;
+$border-color: $primary-color;
+$border-radius: 4px;
+
+// text
+$text-primary: $primary-color;
+$text-secondary: $secondary-color;
+$text-accent: $accent-color;
+$text-light: $color-white;
+
+// btn
+$button-hover-bg: $secondary-color;
+$button-selected-bg: $secondary-color;
+$button-border-color: $primary-color;
+$button-text-color: $primary-color;
+
+// card btn
+$card-button-hover-bg: $secondary-color;
+$card-button-bg: $color-red;
+$card-button-text-color: $color-white;

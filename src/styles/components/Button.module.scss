@@ -1,0 +1,8 @@
+@use '@styles/mixins' as *;
+.button {
+  @include button-styles;
+}
+
+.card-button {
+  @include card-button-styles;
+}
