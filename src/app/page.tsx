@@ -5,12 +5,8 @@ export default async function Home() {
   const initialCars = await fetchCarsByBrand();
 
   return (
-    <>
-      <div>
-        <div>
-          <CarGallery initialCars={initialCars} />
-        </div>
-      </div>
-    </>
+    <main>
+      <CarGallery initialCars={initialCars} />
+    </main>
   );
 }

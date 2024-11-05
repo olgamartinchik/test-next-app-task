@@ -7,6 +7,27 @@ export enum Brands {
   Changan = 'Changan',
   Jaecoo = 'Jaecoo',
 }
+
+export enum Equipments {
+  Action = 'Action',
+  Techno = 'Techno',
+  Travel = 'Travel',
+  Luxury = 'Luxury',
+  Cosmo = 'Cosmo',
+  Trek = 'Trek',
+  Comfort = 'Comfort',
+  Family = 'Family',
+  Prestige = 'Prestige',
+  Elite = 'Elite',
+  Dreamline = 'Dreamline',
+  Spreedline = 'Spreedline',
+  Ultimate = 'Ultimate',
+}
+export enum Engines {
+  Minimum = '1.5',
+  Middle = '1.6',
+  Maximum = '2.0',
+}
 type CarPhoto = {
   _id: string;
   season: string;

@@ -7,8 +7,17 @@ const Header: FC = () => {
   return (
     <header className={styles.header}>
       <Link href={`/`}>
-        <Image src='/logo.svg' alt='Logo' width={154} height={42} priority />
+        <Image
+          className={styles.image}
+          src='/logo.svg'
+          alt='Logo'
+          width={154}
+          height={42}
+          priority
+        />
       </Link>
+      <div className={styles.separator}></div>
+      <p>Официальный дилер Максимум</p>
     </header>
   );
 };

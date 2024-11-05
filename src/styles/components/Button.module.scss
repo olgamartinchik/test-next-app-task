@@ -1,8 +1,18 @@
 @use '@styles/mixins' as *;
-.button {
-  @include button-styles;
+.container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    gap: 4px;
+    flex-wrap: nowrap;
+  }
 }
-
-.card-button {
-  @include card-button-styles;
+.filterBtn {
+  @include button-styles;
+  font-size: 16px;
+  font-weight: 500;
+  @media (max-width: 768px) {
+    font-size: 8px;
+  }
 }

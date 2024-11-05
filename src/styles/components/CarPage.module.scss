@@ -1,0 +1,154 @@
+@use '@styles/variables' as *;
+
+.headline {
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.vin {
+  color: $secondary-color;
+}
+
+.image {
+  border-radius: $img-radius;
+  max-width: 876px;
+  width: 100%;
+  max-height: 719px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px 0 80px;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    gap: 20px;
+    padding: 30px 0 50px;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  min-width: 280px;
+
+  @media (max-width: 768px) {
+    gap: 30px;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.price,
+.guarantee {
+  background-color: $color-light-grey;
+  border-radius: 12px;
+  padding: 20px 40px;
+}
+
+.price {
+  color: $color-red;
+}
+
+.guarantee {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+
+  h3 {
+    font-weight: inherit;
+  }
+
+  .icon {
+    margin-right: 20px;
+    width: 26px;
+    height: 37px;
+    background-image: url('/Vector.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.property {
+  h2 {
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: $color-light-grey;
+  border-radius: 12px;
+  padding: 60px;
+
+  h3 {
+    font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+}
+
+.block > div {
+  display: flex;
+  align-items: center;
+}
+
+.icon,
+.icon1,
+.icon2 {
+  margin-right: 40px;
+  width: 84px;
+  height: 84px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: 768px) {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.icon {
+  background-image: url('/icons.png');
+}
+
+.icon1 {
+  background-image: url('/icons-1.png');
+}
+
+.icon2 {
+  background-image: url('/icons-2.png');
+}

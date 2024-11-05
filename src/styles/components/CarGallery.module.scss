@@ -1,0 +1,63 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as *;
+.wrapper {
+  h1 {
+    font-weight: 900;
+    margin-bottom: 60px;
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 3.125vw;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+
+    gap: 30px;
+  }
+
+  .buttons {
+    max-width: 500px;
+    min-width: 280px;
+    width: 100%;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 922px;
+
+    width: 100%;
+    @media (max-width: 768px) {
+      gap: 30px;
+    }
+  }
+  .group {
+    padding: 20px 0;
+    border-bottom: 2px solid $secondary-color;
+    @media (max-width: 768px) {
+      border-bottom: none;
+      padding: 10px 0;
+    }
+    h4 {
+      margin-bottom: 20px;
+    }
+  }
+}
+.resetBtn {
+  @include reset-button-styles;
+  margin-top: 40px;
+  font-size: 28px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .hidden {
+    display: none;
+  }
+}

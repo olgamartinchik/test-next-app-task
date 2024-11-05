@@ -1,14 +1,12 @@
+import { API_URL, BASE_BRAND } from '../constants/constants';
 import { CarResponse } from '../types/types';
 
 export async function fetchCarsByBrand(
-  brand = 'Chery'
+  brand = BASE_BRAND
 ): Promise<CarResponse[]> {
-  const res = await fetch(
-    `https://test2.maximum-haval.ru/public/test-task/v1/brand/${brand}`,
-    {
-      cache: 'no-store',
-    }
-  );
+  const res = await fetch(`${API_URL}/${brand}`, {
+    cache: 'no-store',
+  });
 
   if (!res.ok) {
     const errorBody = await res.text();

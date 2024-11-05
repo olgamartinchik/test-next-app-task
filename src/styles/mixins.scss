@@ -1,13 +1,29 @@
 @use 'variables' as *;
 
-@mixin button-styles {
+@mixin base-button-styles {
   background-color: transparent;
-  border: 1px solid $button-border-color;
+  border: 2px solid $button-border-color;
   color: $button-text-color;
+  border-radius: $border-radius;
+  @include hover-pointer;
   &:hover {
     background-color: $button-hover-bg;
   }
-  &:active {
+}
+
+@mixin responsive-padding($desktop-padding, $mobile-padding) {
+  padding: $desktop-padding;
+  @media (max-width: 768px) {
+    padding: $mobile-padding;
+  }
+}
+
+@mixin button-styles {
+  @include base-button-styles;
+  @include responsive-padding(8px 20px, 4px 10px);
+
+  &:active,
+  &.active {
     background-color: $button-selected-bg;
   }
 }
@@ -15,7 +31,47 @@
 @mixin card-button-styles {
   background-color: $card-button-bg;
   color: $card-button-text-color;
+  border-radius: $border-radius;
+  @include hover-pointer;
+  border: none;
+  width: 100%;
+  @include responsive-dimensions(440px, 80px, 280px, 40px);
   &:hover {
     background-color: $card-button-hover-bg;
+    @include hover-pointer;
+  }
+}
+
+@mixin reset-button-styles {
+  @include base-button-styles;
+  width: 100%;
+  @include responsive-dimensions(500px, 80px, 500px, 80px);
+}
+
+@mixin responsive-dimensions(
+  $desktop-width,
+  $desktop-height,
+  $mobile-width,
+  $mobile-height
+) {
+  max-width: $desktop-width;
+  height: $desktop-height;
+  @media (max-width: 768px) {
+    max-width: $mobile-width;
+    height: $mobile-height;
+  }
+}
+@mixin font-style($weight, $size, $line-height, $color) {
+  font-family: var(--font-tactic-sans), sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+@mixin hover-pointer($transition-time: 0.3s) {
+  cursor: pointer;
+  transition: all $transition-time ease;
+  &:hover {
+    cursor: pointer;
   }
 }

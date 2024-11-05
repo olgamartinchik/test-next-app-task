@@ -2,15 +2,8 @@
 @use '@styles/variables' as *;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-primary: var(--font-tactic-sans);
+  --font-size-body: 16px;
 }
 
 html,
@@ -20,9 +13,10 @@ body {
 }
 
 body {
-  // color: var(--foreground);
   background: $background-color;
   font-family: var(--font-tactic-sans), sans-serif;
+  font-size: var(--font-size-body);
+  color: $primary-color;
 }
 
 * {
@@ -35,9 +29,37 @@ a {
   color: inherit;
   text-decoration: none;
 }
+main {
+  padding: 5.21% 11.4% 8.8%;
+  @media (max-width: 768px) {
+    padding: 1.875rem 5%;
+  }
+}
+h1,
+h2 {
+  font-size: 40px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+h3 {
+  font-size: 32px;
+  font-weight: 900;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+h4 {
+  font-size: 28px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+p {
+  font-size: 16px;
+  font-weight: 500;
+  @media (max-width: 768px) {
+    font-size: 10px;
   }
 }
