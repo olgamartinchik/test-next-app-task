@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Brands } from '../../../types/types';
 import styles from '@styles/components/CarPage.module.scss';
 import Footer from '@components/Footer';
+import CarCarousel from '@components/CarCarousel';
 
 const CarPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
@@ -15,7 +16,7 @@ const CarPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   if (!car) {
     return <div>Car not found</div>;
   }
-  let formattedNumber = car.price.toLocaleString('ru-RU');
+  const formattedNumber = car.price.toLocaleString('ru-RU');
   return (
     <>
       <main>
@@ -66,7 +67,8 @@ const CarPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             />
           </div>
         </div>
-        <div className={styles.promo}></div>
+
+        <CarCarousel imageSet={car.photos.imgs} />
       </main>
       <Footer name={`${car.brandName} ${car.modelName}`} />
     </>

@@ -1,5 +1,5 @@
 'use client';
-import { Brands, CarResponse, Engines, Equipments } from '../types/types';
+import { Brands, CarResponse } from '../types/types';
 import { FC, useState } from 'react';
 import Card from './Card';
 import Button from './Button';

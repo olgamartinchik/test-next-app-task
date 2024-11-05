@@ -28,7 +28,7 @@ export enum Engines {
   Middle = '1.6',
   Maximum = '2.0',
 }
-type CarPhoto = {
+export type CarPhoto = {
   _id: string;
   season: string;
   position: number;

@@ -13,6 +13,7 @@
     "normalize-scss": "8.0.0",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react-responsive-carousel": "^3.2.23",
     "sass": "1.80.6"
   },
   "devDependencies": {
