@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+GitHub https://github.com/olgamartinchik/test-next-app-task
+Деплой https://test-next-app-task.netlify.app/
 
-## Getting Started
+## Описание выполненного задания: Витрина автомобилей и страница автомобиля
 
-First, run the development server:
+## Общая информация
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Разработана витрина автомобилей и страница с деталями автомобиля с использованием Next.js и SCSS. Проект соответствует требованиям и имеет адаптивный дизайн.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Витрина автомобилей
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Адаптивный дизайн: Корректное отображение на десктопах и мобильных устройствах, фильтрация по бренду.
+Логотип: Ведет на главную страницу.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Страница автомобиля
 
-## Learn More
+Слайдер с фотографиями: Реализован адаптивный слайдер для отображения фотографий автомобиля.
 
-To learn more about Next.js, take a look at the following resources:
+## Используемые технологии
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js: Серверный рендеринг (SSR) с клиентскими запросами к API.
+Fetch API: Для асинхронных запросов.
+CSS Modules и SCSS: Модульная структура стилей с Normalize.css.
+Данные
+Использованы данные по брендам (Chery, Haval, Geely и др.) из API: https://test2.maximum-haval.ru/public/test-task/v1/brand/{brand}.
